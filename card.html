@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twiiter Card</title>
+  <link rel="stylesheet" href="./card.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <div class="card-image">
+
+      </div>
+      <div class="card-user-details">
+        <h3 class="card-profile">Sai Subha</h3>
+        <div class="card-username">@bandaruss</div>
+      </div>
+    </div>
+    <div class="card-content">
+      <div class="card-tweet">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium dolorem itaque corrupti saepe deleniti facere beatae sunt, temporibus tenetur
+      </div>
+      <div class="card-date">
+        04 Dec 2022
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="card-icon">
+        <i class="fa-regular fa-comment"></i>
+        152k
+      </div>
+      <div class="card-icon">
+        <i class="fa-solid fa-retweet"></i>
+        45k
+      </div>
+      <div class="card-icon" id="like">
+        <i class="fa-regular fa-heart" id="like-icon"></i>
+        <span id="tweetlikes">123</span>
+      </div>
+      <div class="card-icon">
+        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+      </div>
+    </div>
+  </div>
+  <script>
+    const likeButton = document.getElementById('like');
+    const likeIcon = document.getElementById('like-icon');
+    const tweetLikes = document.getElementById('tweetlikes');
+    likeButton.addEventListener('click', () => {
+      let likes = parseInt(tweetLikes.innerText);
+      if(likeIcon.classList.contains('fa-solid')) {
+        likeIcon.classList.remove('fa-solid')
+        likeIcon.classList.add('fa-regular')
+        likes--
+        tweetLikes.innerText = likes;
+      } else {
+        likeIcon.classList.add('fa-solid')
+        likeIcon.classList.remove('fa-regular')
+        likes++;
+        tweetLikes.innerText = likes;
+      }
+    })
+  </script>
+</body>
+</html>

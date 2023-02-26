@@ -1,0 +1,16 @@
+.body {
+  /* background: hsl(185, 71%, 23%);
+  background: hwb(185 7% 61%);
+  background: rgb(17, 93, 100); */
+  background: #115d64; /* each two digits represent one color R,G and B respectively */
+  /* 
+    #000 - 
+    #fff - white
+    #f00 - red
+    #0f0 - green
+    #00f - blue
+    0 1 2 3 4 5 6 7 8 9 a b c d e f  
+  */
+  text-align: center;
+  color: white;
+}
